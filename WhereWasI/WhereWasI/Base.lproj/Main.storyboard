@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhereWasI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jYh-hJ-hpT">
+                                <rect key="frame" x="0.0" y="82" width="414" height="732"/>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMN-U7-y18">
+                                <rect key="frame" x="0.0" y="38" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Where Was I?" id="gAV-A7-0JS">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Pdc-sX-xCq">
+                                            <connections>
+                                                <action selector="SaveButtonClicked:" destination="BYZ-38-t0r" id="j6V-sM-yNg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CMN-U7-y18" secondAttribute="trailing" id="9jm-X9-O1e"/>
+                            <constraint firstItem="CMN-U7-y18" firstAttribute="leading" secondItem="jYh-hJ-hpT" secondAttribute="leading" id="OUz-AJ-iAd"/>
+                            <constraint firstItem="CMN-U7-y18" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P2r-bg-RKn"/>
+                            <constraint firstItem="CMN-U7-y18" firstAttribute="trailing" secondItem="jYh-hJ-hpT" secondAttribute="trailing" id="Pab-Ds-Dwp"/>
+                            <constraint firstItem="jYh-hJ-hpT" firstAttribute="top" secondItem="CMN-U7-y18" secondAttribute="bottom" id="Phb-WF-W1C"/>
+                            <constraint firstItem="jYh-hJ-hpT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="U1P-wJ-QkG"/>
+                            <constraint firstItem="CMN-U7-y18" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-6" id="yvD-y6-P5H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="jYh-hJ-hpT" id="lS8-Aa-Hm8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
